@@ -1,0 +1,29 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+
+
+<div class="jumbotron">
+  <h1>PLEASE LOG IN</h1>
+  <form action="{% url 'myapp:user_login' %}" method="POST">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" name="username" placeholder="EnterUsername">
+    <label for="password">Password</label>
+    <input type="password" name="password">
+    <input type="submit" name="" value="Login">
+    
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
